@@ -104,6 +104,7 @@ PRODUCT_PACKAGES += \
 # EOS Extras
 PRODUCT_PACKAGES += \
 	AdvancedDisplay \
+	OTAUpdates \
 	Screencast \
 	eosinit.sh
 
