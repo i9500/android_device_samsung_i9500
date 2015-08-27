@@ -1,11 +1,11 @@
 #!/sbin/busybox sh
 
-if [ ! -f "/system/etc/gearcm" ]
+if [ ! -f "/system/etc/eos" ]
 then
    echo "Wrong ROM, reboot...";
    reboot recovery;
 else
-   echo "This is GearCM, continue...";
+   echo "This is EuphoriaOS, continue...";
 fi
 
 # Mount / as RW
