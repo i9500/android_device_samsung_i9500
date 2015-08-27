@@ -101,15 +101,14 @@ PRODUCT_PACKAGES += \
 	make_ext4fs \
 	setup_fs
 
-# GearCM Extras
+# EOS Extras
 PRODUCT_PACKAGES += \
 	OTAUpdates \
 	Screencast \
-	Synapse \
-	gearinit.sh
+	eosinit.sh
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/env/gearcm:system/etc/gearcm \
+	$(LOCAL_PATH)/configs/env/eos:system/etc/eos \
 	$(LOCAL_PATH)/rootdir/etc/busybox:root/sbin/busybox \
 	$(LOCAL_PATH)/synapse/config.json.generate:root/res/synapse/config.json.generate \
 	$(LOCAL_PATH)/synapse/config.json.generate.audio:root/res/synapse/config.json.generate.audio \
