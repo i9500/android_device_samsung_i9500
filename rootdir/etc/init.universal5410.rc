@@ -446,7 +446,7 @@ on post-fs
 	chmod 0660 /sys/class/rfkill/rfkill0/state
 
 # Permissions for Synapse
-	chmod 0777 /sbin/gearinit.sh
+	chmod 0777 /sbin/eosinit.sh
 
 # Create EFS imei folder
 	mkdir /efs/imei 0775 radio system
@@ -538,7 +538,7 @@ on boot
 	rm /data/smd_started
 	rm /data/sv_cno.info
 
-# GearCM Tweaks (from Perseus)
+# EOS Tweaks (from GearCM)
 	write /sys/devices/system/cpu/sched_mc_power_savings 2
 	write /proc/sys/kernel/randomize_va_space 0
 	write /sys/class/devfreq/exynos5-busfreq-mif/polling_interval 50
@@ -622,8 +622,8 @@ service pvrsrvctl /system/bin/pvrsrvctl
 	group root
 	oneshot
 
-# GearCM Initialization
-service gearinit /sbin/gearinit.sh
+# EOS Initialization
+service eosinit /sbin/eosinit.sh
 	class core
 	user root
 	group root
